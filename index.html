@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>.: Jogo da Memória :.</title>
+</head>
+
+<body>
+    <div id="container">
+        <h3 id="titulo"> JOGO DA MEMÓRIA</h3> 
+        <div id="placar">
+            <h3>Acertos: <span id="result">  0 </span></h3>
+            <h3>Tentativas: <span id="chance">  0 </span></h3>
+        </div>
+        <div class="grid">
+        </div>
+        <div id="cronometro"> 
+            <button id="start">Começar</button>
+            <p class="tempo" style="text-align: center;">
+                <span class="minutos">00</span>:<span class="segundos">00</span>:<span class="milissegundos">00</span>
+              </p>
+        </div>
+    </div>
+    <div id="dev">
+        Desenvolvido por <a href="https://github.com/mtavidal" target="_blank"><u>Manuela Vidal</u></a>
+      </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

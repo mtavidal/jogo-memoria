@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(237, 224, 187);
+    margin: 0px;
+}
+
+#titulo{
+    font-weight: 700;
+    font-size: 60px;
+    text-align: center;
+    line-height: 60px;
+
+}
+
+#placar{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+h3{
+    padding-top: 3px;
+    margin: 0px;
+    font-size: 16px;
+    font-family: 'DynaPuff', cursive;
+    font-weight: 400;
+    color: rgb(68, 20, 115);
+}
+
+#container {
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.grid {
+    background-color: #cfc3db;
+    box-shadow: 1px 1px 10px 2px #1f0a2e; 
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 300px;
+}
+#cronometro{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+#start{
+    margin-bottom: 5px;
+    border: none;
+    font-family: 'DynaPuff', cursive;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    width: 150px;
+    background-color:#361656;
+    color: #c8bed4;
+    border-radius: 5px;
+
+}
+#start:disabled{
+    background-color:#cfc3db;
+    color: #c1a9d9;
+}
+
+
+#parabens{
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.tempo {
+    font-size: 16px;
+    font-family: 'DynaPuff', cursive;
+    font-weight: 400;
+    color: rgb(68, 20, 115);
+}
+
+#dev {
+    background-color: rgb(54, 22, 86);
+    color: #d2c6c6;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'DynaPuff', cursive;
+    border: none;
+}
+
+#dev a {
+    color: #c1a9d9; ;
+}
