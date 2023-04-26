@@ -91,6 +91,8 @@ btnStart.onclick = () => {
             // alert('Achou!');
             cards[optionOneId].setAttribute('src', 'images/white.svg');
             cards[optionTwoId].setAttribute('src', 'images/white.svg');
+            cards[optionOneId].removeEventListener('click', flipCard);
+            cards[optionTwoId].removeEventListener('click', flipCard);
             cardsWon.push(cardsChosen);
         } else {
             cards[optionOneId].setAttribute('src', 'images/fundo.svg');
