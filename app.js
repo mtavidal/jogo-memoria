@@ -1,8 +1,14 @@
 const btnStart = document.querySelector('#start');
+const btnRestart = document.querySelector('#restart');
+btnRestart.disabled = true;
+
+const grid = document.querySelector('.grid');
+grid.innerHTML = `<h3 id="parabens">Vamos jogar?! </br> <img src="./images/happy-svgrepo-com.svg"></h3>`;
 
 btnStart.onclick = () => {
     resetar()
     iniciar();
+    btnRestart.disabled = false;
     btnStart.disabled = true;
     const cardArray = [
         {
@@ -97,27 +103,39 @@ btnStart.onclick = () => {
         if (cardsWon.length === cardArray.length / 2) {
             let tempo = parar();
             btnStart.disabled = false;
-            grid.innerHTML = `<h3 id="parabens">Parabéns! </br> Você concluiu após ${chances} tentativas em ${tempo}.</h3>`;
+            btnRestart.disabled = true;
+            grid.innerHTML = `<h3 id="parabens">Parabéns! </h3> <img src="./images/excited-svgrepo-com.svg"><h4 id=mensagem> Tentativas - ${chances} </br> Tempo - ${tempo} </h4>`;
         }
 
 
     }
 
     function flipCard() {
-        let cardId = this.getAttribute('data-id');
-        cardsChosen.push(cardArray[cardId].name);
-        cardsChosenId.push(cardId);
-        this.setAttribute('src', cardArray[cardId].img);
-        if (cardsChosen.length === 2) {
-            setTimeout(checkForMatch, 500);
-            chances++;
-            resultChance.textContent = chances;
+        if (cardsChosen.length <= 1){
+            let cardId = this.getAttribute('data-id');
+            cardsChosen.push(cardArray[cardId].name);
+            cardsChosenId.push(cardId);
+            this.setAttribute('src', cardArray[cardId].img);
+            if (cardsChosen.length === 2) {
+                setTimeout(checkForMatch, 600);
+                chances++;
+                resultChance.textContent = chances;
+            }
         }
     }
 
     createBoard();
 
 };
+
+btnRestart.onclick = () => {
+    parar();
+    resetar();
+    btnRestart.disabled = true;
+    btnStart.disabled = false;
+    const grid = document.querySelector('.grid');
+    grid.innerHTML = `<h3 id="parabens">Você desistiu! </br> <img src="./images/stressed-svgrepo-com.svg"></h3>`;
+}
 
 const miliseg = document.querySelector('.milissegundos')
 const seg = document.querySelector('.segundos')

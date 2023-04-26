@@ -1,6 +1,7 @@
 body{
     background-color: rgb(237, 224, 187);
     margin: 0px;
+    height: 100vh;
 }
 
 #titulo{
@@ -28,11 +29,11 @@ h3{
 
 #container {
     width: 100vw;
-    height: 95vh;
+    height: 94vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     
 }
 .grid {
@@ -46,44 +47,70 @@ h3{
     flex-wrap: wrap;
     height: 400px;
     width: 300px;
+    justify-content: center;
+    align-content: center;
 }
 #cronometro{
     display: flex;
     justify-content: space-between;
     width: 300px;
+    align-items: center;
 }
-#start{
+#start, #restart{
     margin-bottom: 5px;
     border: none;
     font-family: 'DynaPuff', cursive;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    width: 150px;
+    font-size: 16px;
+    padding: 10px;
+    width: 120px;
     background-color:#361656;
     color: #c8bed4;
     border-radius: 5px;
 
 }
-#start:disabled{
+
+#start:hover, #restart:hover{
+    filter: contrast(80%);
+}
+
+#restart:disabled, #start:disabled{
     background-color:#cfc3db;
     color: #c1a9d9;
 }
-
+#start:disabled:hover, #restart:disabled:hover{
+    filter: contrast(100%);
+}
 
 #parabens{
     font-weight: 700;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
-    line-height: 40px;
+    line-height: 45px;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
 }
 
-.tempo {
-    font-size: 16px;
+#mensagem{
+    display: flex;
+    text-align: center;
+    line-height: 30px;
+    margin: 0px;
+    align-items: center;
     font-family: 'DynaPuff', cursive;
     font-weight: 400;
     color: rgb(68, 20, 115);
+
+}
+
+.tempo {
+    font-size: 18px;
+    font-family: 'DynaPuff', cursive;
+    font-weight: 400;
+    color: rgb(68, 20, 115);
+    width: 150px;
 }
 
 #dev {
