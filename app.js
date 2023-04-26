@@ -117,7 +117,7 @@ btnStart.onclick = () => {
             cardsChosenId.push(cardId);
             this.setAttribute('src', cardArray[cardId].img);
             if (cardsChosen.length === 2) {
-                setTimeout(checkForMatch, 600);
+                setTimeout(checkForMatch, 500);
                 chances++;
                 resultChance.textContent = chances;
             }
