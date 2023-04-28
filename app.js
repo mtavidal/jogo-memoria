@@ -113,11 +113,13 @@ btnStart.onclick = () => {
     }
 
     function flipCard() {
-        if (cardsChosen.length <= 1){
+        if (cardsChosen.length <= 1) {
             let cardId = this.getAttribute('data-id');
-            cardsChosen.push(cardArray[cardId].name);
-            cardsChosenId.push(cardId);
-            this.setAttribute('src', cardArray[cardId].img);
+            if (cardsChosenId[0] != cardId) {
+                cardsChosen.push(cardArray[cardId].name);
+                cardsChosenId.push(cardId);
+                this.setAttribute('src', cardArray[cardId].img);
+            }
             if (cardsChosen.length === 2) {
                 setTimeout(checkForMatch, 500);
                 chances++;
@@ -203,7 +205,7 @@ function parar() {
     }
     if (miliNum < 10) {
         miliNum = '0' + miliNum;
-    } 
+    }
     tempoTotal = minNum + ":" + segNum + ":" + miliNum;
     return tempoTotal
 }
