@@ -66,6 +66,8 @@ btnStart.onclick = () => {
     const grid = document.querySelector('.grid');
     let resultDisplay = document.querySelector('#result');
     let resultChance = document.querySelector('#chance');
+    resultDisplay.textContent = 0;
+    resultChance.textContent = 0;
     let chances = 0;
     let cardsChosen = [];
     let cardsChosenId = [];
